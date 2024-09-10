@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name = "viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Samya Ahsan</title>
+	<link rel="icon" type="image/x-icon" href="https://cdn4.iconfinder.com/data/icons/pacman-8-bit/147/ghost_1-512.png">
+
+	<link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
+	<style>	
+		body {
+			padding-bottom: 50px;
+		}
+		.nes-progress{
+			height:35px;
+		}	
+		.nes-balloon.from-left{
+			padding-left:30px;
+		}
+		#musicPlayer {
+      		display: none;
+    	}
+
+		.music-container {
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+			flex-direction: column;
+		}
+
+		#playButton {
+		margin-top: 20px;
+		}
+		.flex-container {
+            display: inline;
+            align-items: center;
+            justify-content: space-between;
+			padding-right:100px;
+        }
+
+	</style>
+</head>
+<body>
+
+		<nav style='padding: 20px; border-bottom: 3px solid #ccc; margin-bottom: 40px;'>
+			<div class="container">
+				<h2 style='margin-bottom: 0;'>
+					<i class="nes-icon coin"></i>
+				Shivani Palve
+				</h2>
+			</div>
+		</nav>
+
+	<div class="container" style='margin-bottom: 50px;'>
+		<div class="row">
+			<div class="col">
+				<img 
+					src = "me.png"
+					style="width: 100px; height:auto; image-rendering: pixelated; image-rendering: -moz-crisp-edges;"
+					>
+			</div>
+			<div class="col-sm-9 col-xs-12">
+				<div class="nes-balloon from-left">
+		        <p>hi! i'm shivani -- check out my stats!</p>
+		      </div>
+			</div>
+			<div class="music-container">
+				<a class="nes-btn is-primary" id="playButton" href="#" style="margin-bottom:70px;">Play Music</a>
+				<audio id="musicPlayer" controls>
+					<source src="daftpunk.mp3" type="audio/mpeg">
+					Your browser does not support the audio element.
+				</audio>
+			</div>
+			<script>
+				const playButton = document.getElementById("playButton");
+				const musicPlayer = document.getElementById("musicPlayer");
+			  
+				playButton.addEventListener("click", () => {
+				  if (musicPlayer.paused) {
+					musicPlayer.play();
+					playButton.textContent = "Pause Music";
+				  } else {
+					musicPlayer.pause();
+					playButton.textContent = "Play Music";
+				  }
+				});
+			  </script>
+		</div>
+	</div>
+
+	<div class="container" style="margin-top:-50px">
+
+		<div class="row">
+			<div class="col-md-4 col-sm-12 col-xs-12">
+				<div class="nes-container with-title">
+					<h3 class="title">Things I'm Doing</h3>
+					<div>
+						<div class="lists">
+							<ul class="nes-list is-disc" style='margin-bottom:0;'>
+							    <li style='margin-bottom:10px; margin-left:-20px;'>studying cs @ columbia SEAS</li>
+								<li style='margin-bottom:10px; margin-left:-20px;'>machine learning intern @ Reddit</li>
+							    <li style='margin-bottom:10px; margin-left:-20px;'>ml research @ creative machines</li>
+							    <li style='margin-bottom:10px; margin-left:-20px;'>playing zelda: breath of the wild</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="nes-container with-title" style='margin-top:40px; margin-bottom: 40px;'>
+					<h3 class="title">Where to Find Me</h3>
+					<div>
+						<a href = "https://www.linkedin.com/in/shivanipalve">
+							<i class="nes-icon linkedin"></i>
+						</a>
+						<a href = "https://medium.com/@shivani.palve07">
+							<i class="nes-icon medium"></i>
+						</a>
+						<a href = "mailto:sspalve@syr.edu">
+							<i class="nes-icon gmail"></i>
+						</a>
+					</div>
+
+				
+				</div>
+				<div class="nes-container is-dark with-title" style='margin-top:40px; margin-bottom: 40px;'>
+					<h3 class="title">Resume</h3>
+					<div>
+<!-- 						//<a href = "https://www.dropbox.com/scl/fi/zwgqppqkss9fa7shaopt7/Samya_Ahsan_Resume_SWE_Fall_23.pdf?rlkey=2kx70bg80brpmpbvktdsnntl4&dl=0"> -->
+							<i class="snes-jp-logo"></i>
+							My Resume
+						</a>
+					</div>
+				
+			</div>
+
+			
+
+
+
+				
+			</div>
+
+
+			<div class="col-md-8 col-sm-12 col-xs-12">
+				<div class="nes-container with-title" style='margin-bottom:51px;'>
+					<h3 class="title">Core Skills</h3>
+					<div class="row">
+						<div class="col-sm-4 col-xs-12" style='margin-top:12px;'>SQL</div>
+							<div class="col-sm-8 col-xs-12">
+								<progress class="nes-progress progress is-success" value="95" max="100"></progress>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-4 col-xs-12" style='margin-top:12px;'>Excel</div>
+								<div class="col-sm-8 col-xs-12">
+									<progress class="nes-progress is-success" value="90" max="100"></progress>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-4 col-xs-12" style='margin-top:12px;'>Python</div>
+									<div class="col-sm-8 col-xs-12">
+										<progress class="nes-progress is-success" value="80" max="100"></progress>
+									</div>
+								</div>
+
+								<div class="row">
+									<div class="col-sm-4 col-xs-12" style='margin-top:12px;'>SAP</div>
+										<div class="col-sm-8 col-xs-12">
+											<progress class="nes-progress is-warning" value="70" max="100"></progress>
+										</div>
+									</div>
+								</div>
+								<div class="nes-container is-dark with-title" style='margin-top:50px;'>
+									<h3 class="title">Other Tools</h3>
+									<div class="row">
+										<div class="col-sm-4 col-xs-12">Tableau/ PowerBI</div>
+										<div class="col-sm-8 col-xs-12">
+											<progress class="nes-progress is-success" value="90" max="100"></progress>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-sm-4 col-xs-12">Git</div>
+										<div class="col-sm-8 col-xs-12">
+											<progress class="nes-progress is-warning" value="75" max="100"></progress>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-sm-4 col-xs-12">Databases</div>
+										<div class="col-sm-8 col-xs-12">
+											<progress class="nes-progress is-success" value="85" max="100"></progress>
+										</div>
+									</div>
+
+								</div>
+							
+								<!---PREVIOUS EXPERIENCE-->
+								<h3 class="topic-title" style='margin-top:40px;'>
+									<i class="nes-icon star" style = 'margin-right:25px;'></i>Experience
+								</h3>
+								<div class="nes-container">
+
+									
+									<div class="row" style='margin-bottom:30px;'>
+										<div class="col-xs-1.5">
+											<img 
+											src = "/Users/vipulsarode/Downloads/shiv-portfolio/blackbox.png"
+											style="width: 100%; height:auto; image-rendering: pixelated; image-rendering: -moz-crisp-edges;"
+											
+											>
+										</div>
+										<div class="col-xs-10">
+											<h3 style='margin-left:10px;'>BlackBox</h3>
+												<p style='margin-left:10px;'>Financial Aanlyst Intern</p>
+												<p style='margin-left:10px;'>May 2023 - Jan 2024</p>
+											
+											<div>
+	
+												<a href = "https://www.creativemachineslab.com/">
+													<div class="nes-icon google"></div>
+												</a>
+											</div>
+											
+										</div>
+									</div>
+									<div class="row" style='margin-top:30px;'>
+										<div class="col-xs-1.5">
+											<img 
+											src = "/Users/vipulsarode/Downloads/shiv-portfolio/image.png"
+											style="width: 50px; height:auto; image-rendering: pixelated; image-rendering: -moz-crisp-edges;"
+											>
+										</div>
+										<div class="col-xs-10">
+											<h3 style='margin-left:10px;'>Essar</h3>
+												<p style='margin-left:10px;'>Financial Analyst</p>
+												<p style='margin-left:10px;'>Jan 2021 - May 2022</p>
+
+											
+										</div>
+									</div>
+
+									<div class="row" style='margin-top:30px;'>
+										<div class="col-xs-1.5">
+											<img 
+											src = "/Users/vipulsarode/Downloads/shiv-portfolio/target.png"
+											style="width: 100%; height:auto; image-rendering: pixelated; image-rendering: -moz-crisp-edges;"
+											>
+										</div>
+										<div class="col-xs-10">
+											<h3 style='margin-left:10px;'>Slice</h3>
+												<p style='margin-left:10px;'>Junior Financial Analyst</p>
+												<p style='margin-left:10px;'>Jun 2019 - Dec 2020</p>
+											
+										</div>
+									</div>
+									
+								</div>
+
+								<h3 class="topic-title" style='margin-top:40px;'>
+									<i class="nes-icon star" style = 'margin-right:25px;'></i>Projects
+								</h3>
+								<div class="nes-container">
+									<!-- Example education entry -->
+									<div class="row" style='margin-bottom:30px;'>
+										<div class="col-xs-1.5">
+											<img src="/Users/vipulsarode/Downloads/shiv-portfolio/uber.png" style="width: 100%; height:auto; image-rendering: pixelated; image-rendering: -moz-crisp-edges;">
+										</div>
+										<div class="col-xs-10">
+											<h3 style='margin-left:10px;'>Graham's dining hall</h3>
+											<p style='margin-left:10px;'>Degree or Program</p>
+											<p style='margin-left:10px;'>Years Attended</p>
+										</div>
+									</div>
+
+									<div class="row" style='margin-bottom:30px;'>
+										<div class="col-xs-1.5">
+											<img src="/Users/vipulsarode/Downloads/shiv-portfolio/uber.png" style="width: 100%; height:auto; image-rendering: pixelated; image-rendering: -moz-crisp-edges;">
+										</div>
+										<div class="col-xs-10">
+											<h3 style='margin-left:10px;'>University or School Name</h3>
+											<p style='margin-left:10px;'>Degree or Program</p>
+											<p style='margin-left:10px;'>Years Attended</p>
+										</div>
+									</div>
+
+									<div class="row" style='margin-bottom:30px;'>
+										<div class="col-xs-1.5">
+											<img src="/Users/vipulsarode/Downloads/shiv-portfolio/uber.png" style="width: 100%; height:auto; image-rendering: pixelated; image-rendering: -moz-crisp-edges;">
+										</div>
+										<div class="col-xs-10">
+											<h3 style='margin-left:10px;'>University or School Name</h3>
+											<p style='margin-left:10px;'>Degree or Program</p>
+											<p style='margin-left:10px;'>Years Attended</p>
+										</div>
+									</div>
+									<div class="row" style='margin-bottom:30px;'>
+										<div class="col-xs-1.5">
+											<img src="/Users/vipulsarode/Downloads/shiv-portfolio/uber.png" style="width: 100%; height:auto; image-rendering: pixelated; image-rendering: -moz-crisp-edges;">
+										</div>
+										<div class="col-xs-10">
+											<h3 style='margin-left:10px;'>University or School Name</h3>
+											<p style='margin-left:10px;'>Degree or Program</p>
+											<p style='margin-left:10px;'>Years Attended</p>
+										</div>
+									</div>
+									<!-- More entries can be added here -->
+								</div>
+
+								
+							</div>
+							
+						</div>
+						
+					</div>
+					
+				</div>
+				
+				
+
+			</div>
+			<div class="container" style='margin-top:50px; padding-top:0px; font-size:60%'>
+				<div class="row">
+					<div class="col-xs-12" style='text-align:center; color:#ccc;'>
+						
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+		
+	</div>
+
+	<!---wash here-->
+</body>
+</html>
